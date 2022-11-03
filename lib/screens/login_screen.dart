@@ -48,7 +48,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Text(
-                    'CashFlow App',
+                    'YourWallet',
                     style: TextStyle(
                       fontSize: 32,
                       fontWeight: FontWeight.bold,

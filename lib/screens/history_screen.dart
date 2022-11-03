@@ -39,7 +39,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
               child: Stack(
                 children: [
                   const Padding(
-                    padding: EdgeInsets.only(top: 56),
+                    padding: EdgeInsets.only(top: 10),
                     child: Center(
                       child: Text(
                         'Detail Cashflow',
@@ -54,7 +54,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
                   Align(
                     alignment: Alignment.centerLeft,
                     child: Padding(
-                      padding: const EdgeInsets.only(left: 8, top: 56),
+                      padding: const EdgeInsets.only(left: 10, top: 10),
                       child: IconButton(
                         color: Colors.white,
                         onPressed: () {
@@ -93,12 +93,12 @@ class _HistoryScreenState extends State<HistoryScreen> {
                             child: CircleAvatar(
                               radius: 30, // Image radius
                               backgroundColor: lightColor,
-                              backgroundImage:
-                                  _transactions[index]['category'] == 'income'
-                                      ? const AssetImage(
-                                          'assets/images/income.png')
-                                      : const AssetImage(
-                                          'assets/images/salary.png'),
+                              backgroundImage: _transactions[index]
+                                          ['category'] ==
+                                      'income'
+                                  ? const AssetImage('assets/images/income.png')
+                                  : const AssetImage(
+                                      'assets/images/salary.png'),
                             ),
                           ),
                           Expanded(

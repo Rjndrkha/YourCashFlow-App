@@ -42,7 +42,7 @@ class _SettingScreenState extends State<SettingScreen> {
               child: Stack(
                 children: [
                   const Padding(
-                    padding: EdgeInsets.only(top: 56),
+                    padding: EdgeInsets.only(top: 10),
                     child: Center(
                       child: Text(
                         'Pengaturan',
@@ -57,7 +57,7 @@ class _SettingScreenState extends State<SettingScreen> {
                   Align(
                     alignment: Alignment.centerLeft,
                     child: Padding(
-                      padding: const EdgeInsets.only(left: 8, top: 56),
+                      padding: const EdgeInsets.only(left: 10, top: 10),
                       child: IconButton(
                         color: Colors.white,
                         onPressed: () {
@@ -220,60 +220,47 @@ class _SettingScreenState extends State<SettingScreen> {
                       ),
                     ),
                     const SizedBox(
-                      height: 200,
+                      height: 30,
                     ),
-                    Row(
-                      children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(8),
-                          child: Image.asset(
-                            'assets/images/profile.jpg',
-                            width: 144,
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(8),
+                            child: Image.asset(
+                              'assets/images/profil.jpg',
+                              width: 144,
+                            ),
                           ),
-                        ),
-                        const SizedBox(
-                          width: 12,
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
-                            Padding(
-                              padding: EdgeInsets.only(
-                                bottom: 16,
-                              ),
-                              child: Text(
-                                'About this App..',
-                                style: TextStyle(
-                                  fontSize: 24,
-                                  fontWeight: FontWeight.bold,
+                          const SizedBox(
+                            width: 12,
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: const [
+                              Padding(
+                                padding: EdgeInsets.only(bottom: 8.0),
+                                child: Text(
+                                  'Made By',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w600,
+                                  ),
                                 ),
                               ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(bottom: 8.0),
-                              child: Text(
-                                'Aplikasi ini dibuat oleh:',
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w600,
-                                ),
+                              Padding(
+                                padding: EdgeInsets.only(bottom: 4.0),
+                                child: Text('Rajendra Rakha'),
                               ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(bottom: 4.0),
-                              child: Text('Nama: Mochamad Farid Maulana'),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(bottom: 4.0),
-                              child: Text('NIM: 1941720012'),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(bottom: 4.0),
-                              child: Text('Tanggal: 29 September 2022'),
-                            ),
-                          ],
-                        )
-                      ],
+                              Padding(
+                                padding: EdgeInsets.only(bottom: 4.0),
+                                child: Text('Yourapps Group - 2022'),
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
                     )
                   ],
                 ),

@@ -36,7 +36,8 @@ class DbHelper {
         username TEXT,
         email TEXT,
         password TEXT,
-        photo TEXT
+        photo TEXT,
+        nohp TEXT
       )
     """);
   }
@@ -44,9 +45,24 @@ class DbHelper {
   // Insert single data user
   static Future<void> insertDataUser(Database database) async {
     await database.execute("""
-      INSERT INTO users (name, username, email, password, photo) VALUES 
-      ('Farlan', 'farlan', 'farlan@gmail.com', 'secret123', 'assets/images/profil.jpg'),
-      ('Farid Maulana', 'faridmaulana', 'farid@gmail.com', 'secret123', 'assets/images/profile.jpg')
+      INSERT INTO users (name, username, email, password, photo, nohp) VALUES 
+      ('Rajendra', 'admin', 'admin@gmail.com', 'admin123', 'assets/images/profil.jpg','089631111'),
+      ('Farid Maulana', 'faridmaulana', 'farid@gmail.com', 'secret123', 'assets/images/profil.jpg','089631111')
+    """);
+  }
+
+  // Register
+  static Future<List<Map<String, dynamic>>> register(
+      String name,
+      String username,
+      String email,
+      String password,
+      String photo,
+      String nohp) async {
+    final Database database = await db();
+    return database.rawQuery("""
+      INSERT INTO users (name, username, email, password,photo,nohp) VALUES 
+      ('$name', '$username', '$email', '$password','$photo' , '$nohp')
     """);
   }
 
@@ -66,10 +82,7 @@ class DbHelper {
   // Get user login
   static Future<List<Map<String, dynamic>>> userLoggedIn(int? id) async {
     final db = await DbHelper.db();
-    final data = db.query('users',
-        where: 'id = ?',
-        whereArgs: [id],
-        limit: 1);
+    final data = db.query('users', where: 'id = ?', whereArgs: [id], limit: 1);
 
     return data;
   }

@@ -20,9 +20,10 @@ class _IncomeScreenState extends State<IncomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final Map<String, int> userId = ModalRoute.of(context)!.settings.arguments as Map<String, int>;
+    final Map<String, int> userId =
+        ModalRoute.of(context)!.settings.arguments as Map<String, int>;
     int? id = userId["userId"];
-    
+
     return Scaffold(
       backgroundColor: primaryColor,
       body: SingleChildScrollView(
@@ -34,7 +35,7 @@ class _IncomeScreenState extends State<IncomeScreen> {
               child: Stack(
                 children: [
                   const Padding(
-                    padding: EdgeInsets.only(top: 56),
+                    padding: EdgeInsets.only(top: 10),
                     child: Center(
                       child: Text(
                         'Tambah Pemasukkan',
@@ -49,7 +50,7 @@ class _IncomeScreenState extends State<IncomeScreen> {
                   Align(
                     alignment: Alignment.centerLeft,
                     child: Padding(
-                      padding: const EdgeInsets.only(left: 8, top: 56),
+                      padding: const EdgeInsets.only(top: 10, left: 10),
                       child: IconButton(
                         color: Colors.white,
                         onPressed: () {

@@ -40,8 +40,8 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: primaryColor,
-        body: ListView(children: [
-          Column(
+        body: SafeArea(
+          child: Column(
             // alignment: AlignmentDirectional.bottomCenter,
             children: [
               Container(
@@ -81,6 +81,17 @@ class _HomeScreenState extends State<HomeScreen> {
                                   ),
                                 ),
                               ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 4.0),
+                                child: Text(
+                                  _user[0]['nohp'],
+                                  style: const TextStyle(
+                                    fontSize: 15,
+                                    color: whiteColor,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                              ),
                             ],
                           ),
                         ),
@@ -91,7 +102,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               Container(
                   width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height,
+                  height: MediaQuery.of(context).size.height / 1.32,
                   decoration: const BoxDecoration(
                     color: whiteColor,
                     borderRadius: BorderRadius.only(
@@ -210,7 +221,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                 //BUG HERE
                                 Container(
                                   width: MediaQuery.of(context).size.width,
-                                  height: MediaQuery.of(context).size.height,
+                                  height:
+                                      MediaQuery.of(context).size.height / 1.75,
                                   child: Column(
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
@@ -439,6 +451,6 @@ class _HomeScreenState extends State<HomeScreen> {
                           ])))
             ],
           ),
-        ]));
+        ));
   }
 }

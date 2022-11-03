@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowMaterialGrid: false,
-      title: 'CashFlow App',
+      title: 'YouRwallet',
       theme: ThemeData(
         fontFamily: 'Raleway',
       ),
@@ -29,8 +29,8 @@ class MyApp extends StatelessWidget {
         Routes.loginScreen: (context) => const LoginScreen(),
         Routes.incomeScreen: (context) => const IncomeScreen(),
         Routes.expenseScreen: (context) => const ExpanseScreen(),
-        Routes.historyScreen:(context) => const HistoryScreen(),
-        Routes.settingScreen:(context) => const SettingScreen(),
+        Routes.historyScreen: (context) => const HistoryScreen(),
+        Routes.settingScreen: (context) => const SettingScreen(),
       },
     );
   }

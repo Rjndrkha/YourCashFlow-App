@@ -5,6 +5,7 @@ class UserModel {
   String? email;
   String? password;
   String? photo;
+  String? nohp;
 
   UserModel({
     this.id,
@@ -13,6 +14,7 @@ class UserModel {
     this.email,
     this.password,
     this.photo,
+    this.nohp,
   });
 
   UserMap() {
@@ -23,6 +25,7 @@ class UserModel {
     mapping['email'] = email!;
     mapping['password'] = password!;
     mapping['photo'] = photo!;
+    mapping['nohp'] = nohp!;
     return mapping;
   }
 }
