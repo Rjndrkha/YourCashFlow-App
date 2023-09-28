@@ -14,8 +14,8 @@ class TransactionModel {
   });
 
   transactionMap() {
-    var mapping = Map<String, dynamic>();
-    mapping['id'] = id ?? null;
+    var mapping = <String, dynamic>{};
+    mapping['id'] = id;
     mapping['date'] = date!;
     mapping['nominal'] = nominal!;
     mapping['description'] = description!;

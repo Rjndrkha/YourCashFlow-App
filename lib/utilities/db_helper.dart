@@ -46,8 +46,8 @@ class DbHelper {
   static Future<void> insertDataUser(Database database) async {
     await database.execute("""
       INSERT INTO users (name, username, email, password, photo, nohp) VALUES 
-      ('Rajendra', 'admin', 'admin@gmail.com', 'admin123', 'assets/images/profil.jpg','089631111'),
-      ('Farid Maulana', 'faridmaulana', 'farid@gmail.com', 'secret123', 'assets/images/profil.jpg','089631111')
+      ('Rajendra', 'admin', 'admin@gmail.com', 'admin123', 'assets/images/profil.jpg','089631111')
+      
     """);
   }
 

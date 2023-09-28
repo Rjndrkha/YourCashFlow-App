@@ -18,8 +18,8 @@ class UserModel {
   });
 
   UserMap() {
-    var mapping = Map<String, dynamic>();
-    mapping['id'] = id ?? null;
+    var mapping = <String, dynamic>{};
+    mapping['id'] = id;
     mapping['name'] = name!;
     mapping['username'] = username!;
     mapping['email'] = email!;

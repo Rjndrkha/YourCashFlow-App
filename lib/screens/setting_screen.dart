@@ -194,7 +194,7 @@ class _SettingScreenState extends State<SettingScreen> {
                         Navigator.pushAndRemoveUntil(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => LoginScreen(),
+                            builder: (context) => const LoginScreen(),
                           ),
                           (route) => false,
                         )
@@ -236,9 +236,9 @@ class _SettingScreenState extends State<SettingScreen> {
                           const SizedBox(
                             width: 12,
                           ),
-                          Column(
+                          const Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
+                            children: [
                               Padding(
                                 padding: EdgeInsets.only(bottom: 8.0),
                                 child: Text(

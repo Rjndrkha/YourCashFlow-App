@@ -219,7 +219,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ),
 
                                 //BUG HERE
-                                Container(
+                                SizedBox(
                                   width: MediaQuery.of(context).size.width,
                                   height:
                                       MediaQuery.of(context).size.height / 1.75,
@@ -253,7 +253,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 },
                                               )
                                             },
-                                            child: Container(
+                                            child: SizedBox(
                                               width: MediaQuery.of(context)
                                                       .size
                                                       .width /
@@ -305,7 +305,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 },
                                               )
                                             },
-                                            child: Container(
+                                            child: SizedBox(
                                               width: MediaQuery.of(context)
                                                       .size
                                                       .width /
@@ -358,7 +358,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                               Navigator.pushNamed(
                                                   context, Routes.historyScreen)
                                             },
-                                            child: Container(
+                                            child: SizedBox(
                                               width: MediaQuery.of(context)
                                                       .size
                                                       .width /
@@ -405,7 +405,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 ),
                                               )
                                             },
-                                            child: Container(
+                                            child: SizedBox(
                                               width: MediaQuery.of(context)
                                                       .size
                                                       .width /
